@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yian Zhuang — Hardware &amp; Embedded Systems | UC San Diego</title>
+  <meta name="description" content="Computer Engineering student at UC San Diego working on hardware validation and embedded systems for an autonomous-vehicle platform at Triton AI. Seeking Summer 2027 hardware and embedded internships." />
+  <meta name="author" content="Yian Zhuang" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yian Zhuang — Hardware &amp; Embedded Systems" />
+  <meta property="og:description" content="Computer Engineering @ UCSD · Embedded Systems · Hardware Debugging · PCB Assembly · Triton AI" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://TODO-your-domain" />
+  <!-- TODO: create og-image.png (1200x630) and update this URL -->
+  <meta property="og:image" content="https://TODO-your-domain/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yian Zhuang — Hardware &amp; Embedded Systems" />
+  <meta name="twitter:description" content="Computer Engineering @ UCSD · Embedded Systems · Hardware Debugging · PCB Assembly" />
+  <!-- TODO: update twitter:image URL once og-image.png is created -->
+  <meta name="twitter:image" content="https://TODO-your-domain/og-image.png" />
+
+  <!-- Favicons -->
+  <!-- TODO: add favicon.ico (32x32) and apple-touch-icon.png (180x180) to repo root -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- If JavaScript is off, show every section instead of leaving them faded out -->
+  <noscript><style>.fade-in { opacity: 1; transform: none; }</style></noscript>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+        <div class="hero-tag">Computer Engineering · UCSD</div>
+        <h1>Yian Zhuang</h1>
+        <p class="hero-sub">Embedded Systems · Hardware Debugging · PCB Assembly</p>
+        <p class="hero-desc">
+          Computer Engineering at UC San Diego, graduating December 2027. Embedded &amp; Electrical team at Triton AI. Open to Summer 2027 hardware and embedded internships.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="mailto:yianzh9.career@gmail.com?subject=Internship%20opportunity%20%E2%80%94%20Yian">yianzh9.career@gmail.com</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/yian-d-zhuang/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn-secondary" href="misc/LatestResume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+        </div>
+        <p class="hero-badge">Open to Summer 2027 internships</p>
+        </div>
+        <!-- PHOTO: photo is images/1773020861646.jpeg. Delete this block if you don't want one. -->
+        <div class="hero-photo media-slot">
+          <img src="images/1773020861646.jpeg" alt="Yian Zhuang" onerror="this.remove()" />
+          <span class="placeholder-label">Photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <h2>Things I've built</h2>
+      <div class="projects-grid fade-in">
+
+        <!-- Project 1: Qualcomm cluster power characterization (click opens dialog id="project-qualcomm") -->
+        <div class="project-card" data-dialog="project-qualcomm">
+          <!-- PHOTO: images/testbenchPi.jpg -->
+          <div class="project-img-placeholder media-slot">
+            <img src="images/testbenchPi.jpg" alt="Qualcomm QCS6490 board on the power test bench" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">Qualcomm Cluster Power Characterization</div>
+              <button class="project-more" type="button" data-dialog="project-qualcomm">Details</button>
+            </div>
+            <p class="project-tagline">Qualcomm-sponsored · CSE 145</p>
+            <p class="project-desc">
+              Measured real per-node power draw on a Qualcomm QCS6490 board under staged load, showing the planned 15 W budget was too low and setting the 20 W per-node target used in the cluster's 24-node V1 power distribution design.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">&gt;18 W peak draw</span>
+              <span class="metric">~13% rail droop</span>
+              <span class="metric">20 W/node target adopted</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">stress-ng</span>
+              <span class="tag">Power Validation</span>
+              <span class="tag">Thermal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: DC-DC step-down converter, Triton AI (click opens dialog "project-converter") -->
+        <div class="project-card" data-dialog="project-converter">
+          <!-- PHOTO: images/stepdowncircuit.png (shown whole, not cropped, since it's a design screenshot) -->
+          <div class="project-img-placeholder media-slot media-contain">
+            <img src="images/stepdowncircuit.png" alt="Altium Designer view of the DC-DC step-down converter" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">DC-DC Step-Down Converter</div>
+              <button class="project-more" type="button" data-dialog="project-converter">Details</button>
+            </div>
+            <p class="project-tagline">Triton AI · Autonomous-vehicle platform</p>
+            <p class="project-desc">
+              Took a step-down converter board from schematic to validated hardware for the vehicle's onboard compute: designed in Altium Designer, released for fabrication, hand-soldered the SMD assembly, and bench-tested it.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">Schematic → fab → assembly → test</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Altium Designer</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">Power Electronics</span>
+              <span class="tag">SMD Soldering</span>
+              <span class="tag">Bench Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: PhobGCC Hall Effect Controller (click opens dialog id="project-phobgcc") -->
+        <div class="project-card" data-dialog="project-phobgcc">
+          <!-- PHOTO: images/PhobGCC Final.png (the %20 in the path is the space in the file name) -->
+          <div class="project-img-placeholder media-slot">
+            <img src="images/PhobGCC%20Final.png" alt="Finished PhobGCC controller board" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">PhobGCC Hall Effect Controller</div>
+              <button class="project-more" type="button" data-dialog="project-phobgcc">Details</button>
+            </div>
+            <p class="project-tagline">Drift-free game controller rebuilt with Hall effect sensors.</p>
+            <p class="project-desc">
+              Assembled a PhobGCC board, hand-soldering SMD and through-hole components to replace resistive potentiometers with Hall effect magnetic position sensors.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">Working first-revision build</span>
+              <span class="metric">SMD + through-hole</span>
+            </div>
+            <div class="tags">
+              <span class="tag">PCB Assembly</span>
+              <span class="tag">SMD Soldering</span>
+              <span class="tag">Hall Effect Sensors</span>
+              <span class="tag">Schematic Tracing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Mini SQL Engine -->
+        <div class="project-card">
+          <!-- PHOTO: images/SQLShowcase.png -->
+          <div class="project-img-placeholder media-slot">
+            <img src="images/SQLShowcase.png" alt="Mini SQL engine running a query" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">Mini SQL Engine</div>
+              <a class="project-link" href="https://github.com/YianDZh/Mini-SQL-Database" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <p class="project-tagline">Console SQL engine, written from scratch in C++.</p>
+            <p class="project-desc">
+              Supports CRUD operations, with a disk-backed B+ tree for indexed lookup and a page-based buffer manager using LRU eviction, built with no external libraries. Query parsing uses a hand-written state machine and a Shunting Yard expression parser for complex predicates.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">CRUD</span>
+              <span class="metric">B+ tree indexed</span>
+              <span class="metric">LRU buffer manager</span>
+            </div>
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">B+ Tree</span>
+              <span class="tag">Storage Engine</span>
+              <span class="tag">Query Parser</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Graphing Calculator -->
+        <div class="project-card">
+          <!-- PHOTO: images/Graphing calc.png (the %20 in the path is the space in the file name) -->
+          <div class="project-img-placeholder media-slot">
+            <img src="images/Graphing%20calc.png" alt="Graphing calculator plotting functions" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">Graphing Calculator</div>
+              <a class="project-link" href="https://github.com/YianDZh/GraphingCALC" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <p class="project-tagline">Interactive function plotter in C++.</p>
+            <p class="project-desc">
+              Interactive function plotter with a modular object-oriented rendering and grid system, using a custom Reverse Polish Notation expression evaluator for real-time equation plotting.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">Real-time plotting</span>
+              <span class="metric">Custom RPN evaluator</span>
+            </div>
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">SFML</span>
+              <span class="tag">OOP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: IoT Smart Mailbox (click opens dialog id="project-mailbox") -->
+        <div class="project-card" data-dialog="project-mailbox">
+          <!-- PHOTO: images/mailbox set up.jpg (the %20 in the path is the space in the file name) -->
+          <div class="project-img-placeholder media-slot">
+            <img src="images/mailbox%20set%20up.jpg" alt="Smart mailbox prototype set up for the demo" loading="lazy" onerror="this.remove()" />
+            <span class="placeholder-label">Photo coming soon</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">IoT Smart Mailbox</div>
+              <div class="project-actions">
+                <a class="project-link" href="https://devpost.com/software/mailbox" target="_blank" rel="noopener">Devpost ↗</a>
+                <button class="project-more" type="button" data-dialog="project-mailbox">Details</button>
+              </div>
+            </div>
+            <p class="project-tagline">Hard Hack 2026 · 4-person team · 24-hour build</p>
+            <p class="project-desc">
+              Designed and 3D-printed the enclosure that integrated an Arduino Uno R4 WiFi, RFID reader, ultrasonic sensor, and servo lock into one assembly.
+            </p>
+            <div class="project-metrics">
+              <span class="metric">Working demo in 24 hours</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Arduino Uno R4 WiFi</span>
+              <span class="tag">RFID</span>
+              <span class="tag">Ultrasonic</span>
+              <span class="tag">Servo</span>
+              <span class="tag">3D Printing</span>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2>Where I've worked</h2>
+      <div class="exp-list fade-in">
+
+        <div class="exp-item">
+          <div class="exp-date">Jan 2026 — Present</div>
+          <div>
+            <div class="exp-role">Embedded &amp; Electrical Team Member</div>
+            <div class="exp-org">UC San Diego — Triton AI</div>
+            <ul class="exp-bullets">
+              <li>Took a DC-DC step-down converter board from schematic to validated hardware: designed in Altium Designer, released for fabrication, hand-soldered the SMD assembly, and bench-tested it delivering regulated power to onboard compute on an autonomous-vehicle platform.</li>
+              <li>Developing ROS2 software for an autonomous Jeep platform, bridging low-level vehicle hardware to the higher-level autonomy stack.</li>
+              <li>Built working knowledge of STM32 (ARM Cortex-M4) firmware and peripheral communication over I2C and SPI alongside the embedded team.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Jan 2026 — Jun 2026</div>
+          <div>
+            <div class="exp-role">Research Fellow</div>
+            <div class="exp-org">UC San Diego — i4NS</div>
+            <ul class="exp-bullets">
+              <li>Shaped product direction for ENCOMPASS, a defense technology discovery platform, by conducting 10+ stakeholder interviews across NIWC Pacific, SOFWERX, and Sandia National Labs to translate operator needs into technical requirements.</li>
+              <li>Delivered the MVP front-end interface that lets researchers search and rank academic publications for defense R&amp;D discovery.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Sep 2024 — Jun 2025</div>
+          <div>
+            <div class="exp-role">Physics Lab Technician</div>
+            <div class="exp-org">Pasadena City College</div>
+            <ul class="exp-bullets">
+              <li>Maintained 100% equipment availability across 100+ lab experiments per semester by diagnosing and repairing faults in oscilloscopes and power supplies through soldering rework and precision calibration.</li>
+              <li>Achieved zero equipment loss across two semesters of high-value scientific assets by designing and deploying a digital inventory tracking system.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Earlier and non-technical roles, collapsed by default -->
+      <details class="other-exp fade-in">
+        <summary>Earlier &amp; non-technical roles <span class="other-exp-count">(5)</span></summary>
+        <div class="exp-list">
+
+          <div class="exp-item">
+            <div class="exp-date">Sep 2023 — Jun 2024</div>
+            <div>
+              <div class="exp-role">Inter-Club Council Representative</div>
+              <div class="exp-org">Pasadena City College — she.codes</div>
+              <ul class="exp-bullets">
+                <li>Secured semester club funding by presenting budget proposals to the Inter-Club Council, enabling technical workshops and STEM outreach events.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">Jun 2023 — Jun 2024</div>
+            <div>
+              <div class="exp-role">Welcome Crew Lead</div>
+              <div class="exp-org">Angel City FC · Los Angeles, CA</div>
+              <ul class="exp-bullets">
+                <li>Coordinated matchday event logistics and provided technical troubleshooting for mobile ticketing and entry systems serving high-volume attendance.</li>
+                <li>Resolved attendee issues in high-pressure, time-constrained conditions while maintaining event flow.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">Jun 2023 — Aug 2023</div>
+            <div>
+              <div class="exp-role">JAM Leader</div>
+              <div class="exp-org">Pasadena City College — Pathways Program</div>
+              <ul class="exp-bullets">
+                <li>Facilitated academic workshops and orientation sessions for incoming first-year engineering students.</li>
+                <li>Partnered with Pathways staff to mentor students on academic readiness and STEM program expectations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">Sep 2022 — Nov 2022</div>
+            <div>
+              <div class="exp-role">Sales &amp; Logistics Intern</div>
+              <div class="exp-org">Nagano · Ambato, Ecuador</div>
+              <ul class="exp-bullets">
+                <li>Managed client relations and sales for automotive spare parts, meeting daily revenue targets during a peak-volume period.</li>
+                <li>Optimized local delivery scheduling and inventory logistics to reduce fulfillment delays.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">2017 — 2022</div>
+            <div>
+              <div class="exp-role">Service Manager (Family Business)</div>
+              <div class="exp-org">Chifa Pekin · Ambato, Ecuador</div>
+              <ul class="exp-bullets">
+                <li>Oversaw cashier operations and bilingual customer service for a high-traffic restaurant while completing secondary and early college coursework.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2>What I work with</h2>
+      <div class="skills-grid fade-in">
+
+        <div class="skill-group">
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-list">
+            <span class="skill-item">C / Embedded C</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">JavaScript (Node.js)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Hardware &amp; Validation</div>
+          <div class="skill-list">
+            <span class="skill-item">Oscilloscopes</span>
+            <span class="skill-item">Logic Analyzers</span>
+            <span class="skill-item">Multimeters</span>
+            <span class="skill-item">Programmable DC Supply</span>
+            <span class="skill-item">Power Rail &amp; Thermal Characterization</span>
+            <span class="skill-item">SMD &amp; Through-Hole Soldering</span>
+            <span class="skill-item">Schematic Reading</span>
+            <span class="skill-item">Datasheet Analysis</span>
+            <span class="skill-item">Hardware Debugging</span>
+            <span class="skill-item">PCB Assembly</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Embedded &amp; Tools</div>
+          <div class="skill-list">
+            <span class="skill-item">STM32 (ARM Cortex-M4)</span>
+            <span class="skill-item">Arduino</span>
+            <span class="skill-item">I2C / SPI</span>
+            <span class="skill-item">stress-ng</span>
+            <span class="skill-item">Altium Designer</span>
+            <span class="skill-item">ROS2</span>
+            <span class="skill-item">Linux (Bash)</span>
+            <span class="skill-item">Git / GitHub</span>
+            <span class="skill-item">Bambu Studio (3D printing)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Spoken Languages</div>
+          <div class="skill-list">
+            <span class="skill-item">Spanish (native)</span>
+            <span class="skill-item">Teochew (native)</span>
+            <span class="skill-item">English (fluent)</span>
+            <span class="skill-item">Mandarin (conversational; HSK 4, taken Dec 5, 2021)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="coursework-skills fade-in">
+        <div class="skill-group-title">Coursework &amp; Early Exposure</div>
+        <div class="coursework-row">
+          <span class="coursework-label">EDA &amp; Simulation</span>
+          <span class="skill-item">Cadence Virtuoso</span>
+          <span class="skill-item">LTspice</span>
+          <span class="skill-item">KiCad</span>
+          <span class="skill-item">Verilog</span>
+        </div>
+        <div class="coursework-row">
+          <span class="coursework-label">Embedded</span>
+          <span class="skill-item">ARM Cortex-M3</span>
+          <span class="skill-item">ESP32</span>
+          <span class="skill-item">STM32 HAL</span>
+          <span class="skill-item">UART</span>
+          <span class="skill-item">CAN Bus</span>
+          <span class="skill-item">GPIO &amp; Interrupts</span>
+          <span class="skill-item">DMA</span>
+        </div>
+        <div class="coursework-row">
+          <span class="coursework-label">Languages &amp; Tools</span>
+          <span class="skill-item">Java</span>
+          <span class="skill-item">Rust</span>
+          <span class="skill-item">ARM Assembly</span>
+          <span class="skill-item">STM32CubeIDE</span>
+          <span class="skill-item">GDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label">Education</p>
+      <h2>Education</h2>
+      <div class="exp-list fade-in">
+
+        <div class="exp-item">
+          <div class="exp-date">Expected Dec 2027</div>
+          <div>
+            <div class="edu-head">
+              <div class="edu-logo"><img src="images/ucsdlogo.png" alt="UC San Diego logo" loading="lazy" onerror="this.parentElement.remove()" /></div>
+              <div>
+                <div class="exp-role">B.S. Computer Engineering</div>
+                <div class="exp-org">UC San Diego</div>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>CSE 140, Components &amp; Design Techniques for Digital Systems: combinational and sequential logic, finite state machines, and digital system design.</li>
+              <li>CSE 141, Introduction to Computer Architecture: instruction sets, pipelining, memory hierarchy, and caches.</li>
+              <li>CSE 145, Embedded System Design Project: Qualcomm-sponsored cluster power characterization (see Projects).</li>
+              <li>ECE 15, Engineering Computation: C programming for engineering problems.</li>
+              <li>ECE 35, Introduction to Analog Design: circuit analysis fundamentals, op-amps, and RC/RL circuits, with lab work.</li>
+              <li>ECE 45, Circuits &amp; Systems: AC and phasor analysis, frequency response, and Fourier analysis.</li>
+              <li>ECE 65, Components &amp; Circuits Laboratory: diode, transistor, and amplifier circuits, built and measured in lab.</li>
+              <li>ECE 109, Engineering Probability &amp; Statistics: random variables, probability distributions, estimation, and hypothesis testing.</li>
+              <li>ECE 141A, Software Foundations I: object-oriented software design in C++.</li>
+              <li>ECE 101, Linear Systems Fundamentals (in progress): continuous- and discrete-time signals and systems, convolution, and transforms.</li>
+              <li>ECE 108, Digital Circuits (in progress): transistor-level design and analysis of CMOS digital logic.</li>
+              <li>ECE 158A, Data Networks I (in progress): network layering, protocols, and performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Jan 2023 — Jun 2025</div>
+          <div>
+            <div class="edu-head">
+              <div class="edu-logo"><img src="images/pcc%20logo.png" alt="Pasadena City College logo" loading="lazy" onerror="this.parentElement.remove()" /></div>
+              <div>
+                <div class="exp-role">A.A. Engineering &amp; Technology · A.S. Applied Sciences · A.S. Natural Sciences</div>
+                <div class="exp-org">Pasadena City College</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2>Get in touch</h2>
+      <div class="contact-inner fade-in">
+        <div class="contact-links">
+          <div class="contact-link-group">
+            <a class="contact-link" href="mailto:yianzh9.career@gmail.com?subject=Internship%20opportunity%20%E2%80%94%20Yian">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-val">yianzh9.career@gmail.com</span>
+            </a>
+            <span class="contact-secondary">Also reachable at d1zhuang@ucsd.edu (school)</span>
+          </div>
+          <a class="contact-link" href="https://www.linkedin.com/in/yian-d-zhuang/" target="_blank" rel="noopener">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-val">linkedin.com/in/yian-d-zhuang</span>
+          </a>
+          <a class="contact-link" href="https://github.com/YianDZh" target="_blank" rel="noopener">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-val">github.com/YianDZh</span>
+          </a>
+          <a class="contact-link" href="tel:+16267769858">
+            <span class="contact-link-label">Phone</span>
+            <span class="contact-link-val">(626) 776-9858</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Built by Yian Zhuang · 2026</span>
+  </footer>
+
+  <!-- PROJECT DETAILS: opened by clicking a project card. Each dialog's id matches the card's data-dialog,
+       and the page URL becomes yoursite/#<id> so a single project can be linked directly.
+       PHOTOS: save the gallery images under the file names shown below; empty slots show their label. -->
+
+  <dialog class="project-dialog" id="project-qualcomm" aria-labelledby="project-qualcomm-title">
+    <div class="dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+      <p class="section-label">Qualcomm-sponsored · CSE 145</p>
+      <h3 class="dialog-title" id="project-qualcomm-title">Qualcomm Cluster Power Characterization</h3>
+      <div class="dialog-gallery">
+        <div class="media-slot">
+              <img src="images/testbenchPi.jpg" alt="QCS6490 board on the power test bench" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Test bench</span>
+            </div>
+        <div class="media-slot">
+              <img src="images/TestingRUbik.jpeg" alt="RUBIK Pi board under staged load testing" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Load testing</span>
+            </div>
+        <div class="media-slot">
+              <img src="images/Powerdistributionfinal145.jpeg" alt="Final power distribution setup for the CSE 145 cluster" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Power distribution</span>
+            </div>
+      </div>
+      <h4 class="dialog-heading">What I did</h4>
+      <ul class="exp-bullets">
+        <li>Invalidated a 15 W per-node power budget by instrumenting a Qualcomm QCS6490 single-board computer under staged stress-ng load, logging thermal zones and power rails with a 0.1 s watchdog sampler and capturing &gt;18 W peak draw with ~13% transient rail droop (3.99 V → 3.47 V).</li>
+        <li>Established the 20 W (5 V / 4 A) per-node target adopted for the 24-node V1 power distribution design by validating 12 V → 5 V buck conversion and hand-building the protoboard GPIO power hat used as the test fixture.</li>
+      </ul>
+      <!-- REPORT: once you've confirmed it can be shared, put the PDF at docs/cse145-report.pdf and uncomment:
+      <a class="project-link dialog-report" href="docs/cse145-report.pdf" target="_blank" rel="noopener">Read the team report (PDF) ↗</a>
+      -->
+      <div class="tags">
+        <span class="tag">Linux</span>
+        <span class="tag">stress-ng</span>
+        <span class="tag">Power Validation</span>
+        <span class="tag">Thermal</span>
+        <span class="tag">Buck Conversion</span>
+        <span class="tag">Protoboard</span>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="project-converter" aria-labelledby="project-converter-title">
+    <div class="dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+      <p class="section-label">Triton AI · Embedded &amp; Electrical team</p>
+      <h3 class="dialog-title" id="project-converter-title">DC-DC Step-Down Converter</h3>
+      <div class="dialog-gallery">
+        <!-- Add more photos here (bare board, assembled board, bench test) by copying this slot -->
+        <div class="media-slot media-contain">
+              <img src="images/stepdowncircuit.png" alt="Altium Designer view of the DC-DC step-down converter" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Altium design</span>
+            </div>
+      </div>
+      <h4 class="dialog-heading">What I did</h4>
+      <ul class="exp-bullets">
+        <li>Took a DC-DC step-down converter board from schematic to validated hardware: designed in Altium Designer, released for fabrication, hand-soldered the SMD assembly, and bench-tested it delivering regulated power to onboard compute on an autonomous-vehicle platform.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Altium Designer</span>
+        <span class="tag">PCB Design</span>
+        <span class="tag">Power Electronics</span>
+        <span class="tag">SMD Soldering</span>
+        <span class="tag">Bench Testing</span>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="project-phobgcc" aria-labelledby="project-phobgcc-title">
+    <div class="dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+      <p class="section-label">Personal project</p>
+      <h3 class="dialog-title" id="project-phobgcc-title">PhobGCC Hall Effect Controller</h3>
+      <div class="dialog-gallery">
+        <div class="media-slot">
+              <img src="images/PhobGCC%20Final.png" alt="Finished PhobGCC controller board" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Finished board</span>
+            </div>
+        <div class="media-slot">
+              <img src="images/PhobAssembly.jpg" alt="PhobGCC board during hand assembly" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Assembly</span>
+            </div>
+      </div>
+      <h4 class="dialog-heading">What I did</h4>
+      <ul class="exp-bullets">
+        <li>Eliminated joystick drift in a game controller by assembling a PhobGCC board, hand-soldering SMD and through-hole components to replace resistive potentiometers with Hall effect magnetic position sensors.</li>
+        <li>Reached a fully functional first-revision build by tracing schematic nets and probing test points to isolate assembly faults.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">PCB Assembly</span>
+        <span class="tag">SMD Soldering</span>
+        <span class="tag">Hall Effect Sensors</span>
+        <span class="tag">Schematic Tracing</span>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="project-dialog" id="project-mailbox" aria-labelledby="project-mailbox-title">
+    <div class="dialog-inner">
+      <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+      <p class="section-label">Hard Hack 2026</p>
+      <h3 class="dialog-title" id="project-mailbox-title">IoT Smart Mailbox</h3>
+      <div class="dialog-gallery">
+        <!-- images/mailbox set up.jpg, images/mailboxsetup2.png -->
+        <div class="media-slot">
+              <img src="images/mailbox%20set%20up.jpg" alt="Smart mailbox prototype set up for the demo" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Mailbox setup</span>
+            </div>
+        <div class="media-slot">
+              <img src="images/mailboxsetup2.png" alt="Second view of the smart mailbox assembly" loading="lazy" onerror="this.remove()" />
+              <span class="placeholder-label">Assembly</span>
+            </div>
+      </div>
+      <h4 class="dialog-heading">What I did</h4>
+      <ul class="exp-bullets">
+        <li>Delivered a working 4-person hardware build in 24 hours by designing and 3D-printing the enclosure that integrated an Arduino Uno R4 WiFi, RFID reader, ultrasonic sensor, and servo lock into one assembly.</li>
+        <li>Bench-tested each electrical component and debugged wiring faults across the system to bring the mailbox to a fully functional demo state.</li>
+      </ul>
+      <a class="project-link dialog-report" href="https://devpost.com/software/mailbox" target="_blank" rel="noopener">View on Devpost ↗</a>
+      <div class="tags">
+        <span class="tag">Arduino Uno R4 WiFi</span>
+        <span class="tag">RFID</span>
+        <span class="tag">Ultrasonic</span>
+        <span class="tag">Servo</span>
+        <span class="tag">3D Printing</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      function openDialog(id) {
+        var d = document.getElementById(id);
+        if (!d || d.open) return;
+        d.showModal();
+        try { history.replaceState(null, '', '#' + id); } catch (e) {}
+      }
+      document.querySelectorAll('.project-card[data-dialog]').forEach(function (card) {
+        card.addEventListener('click', function (e) {
+          if (e.target.closest('a')) return;            // let GitHub links work normally
+          openDialog(card.dataset.dialog);
+        });
+      });
+      document.querySelectorAll('.project-dialog').forEach(function (d) {
+        d.querySelector('.dialog-close').addEventListener('click', function () { d.close(); });
+        d.addEventListener('click', function (e) { if (e.target === d) d.close(); });   // click outside
+        d.addEventListener('close', function () {
+          try { history.replaceState(null, '', '#projects'); } catch (e) {}
+        });
+      });
+      if (location.hash && document.querySelector('dialog' + location.hash)) openDialog(location.hash.slice(1));
+    })();
+  </script>
+
+  <!-- IMAGE VIEWER: click any photo inside a project's detail panel to open it full screen.
+       Zoom: click/tap the photo, scroll wheel, pinch, or the +/- buttons. Drag to move around when zoomed.
+       Arrow keys or ‹ › switch photos; Esc or × closes. -->
+  <dialog class="lightbox" aria-label="Image viewer">
+    <div class="lb-stage" tabindex="-1" autofocus>
+      <img class="lb-img" alt="" draggable="false" />
+    </div>
+    <div class="lb-bar">
+      <button class="lb-btn" type="button" data-lb="prev" aria-label="Previous photo">&#8249;</button>
+      <span class="lb-count"></span>
+      <button class="lb-btn" type="button" data-lb="next" aria-label="Next photo">&#8250;</button>
+      <span class="lb-sep"></span>
+      <button class="lb-btn" type="button" data-lb="out" aria-label="Zoom out">&minus;</button>
+      <button class="lb-btn lb-fit" type="button" data-lb="fit" aria-label="Fit to screen">Fit</button>
+      <button class="lb-btn" type="button" data-lb="in" aria-label="Zoom in">+</button>
+      <span class="lb-sep"></span>
+      <button class="lb-btn" type="button" data-lb="close" aria-label="Close viewer">&times;</button>
+    </div>
+    <p class="lb-caption"></p>
+  </dialog>
+
+  <script>
+    (function () {
+      var lb = document.querySelector('.lightbox');
+      var stage = lb.querySelector('.lb-stage');
+      var img = lb.querySelector('.lb-img');
+      var caption = lb.querySelector('.lb-caption');
+      var count = lb.querySelector('.lb-count');
+      var list = [], idx = 0, s = 1, tx = 0, ty = 0;
+      var MIN = 1, MAX = 5;
+
+      function apply() { img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')'; lb.classList.toggle('zoomed', s > 1.01); }
+      function clampPan() {
+        var mx = Math.max(0, (s - 1) * img.offsetWidth / 2), my = Math.max(0, (s - 1) * img.offsetHeight / 2);
+        tx = Math.min(mx, Math.max(-mx, tx)); ty = Math.min(my, Math.max(-my, ty));
+      }
+      function reset() { s = 1; tx = 0; ty = 0; apply(); }
+      // Zoom to scale ns, keeping the screen point (px, py) fixed under the cursor/finger
+      function zoomAt(ns, px, py) {
+        ns = Math.min(MAX, Math.max(MIN, ns));
+        var r = stage.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        tx = (px - cx) - (ns / s) * (px - cx - tx);
+        ty = (py - cy) - (ns / s) * (py - cy - ty);
+        s = ns;
+        if (s <= 1.01) { s = 1; tx = 0; ty = 0; }
+        clampPan(); apply();
+      }
+      function zoomCenter(f) { var r = stage.getBoundingClientRect(); zoomAt(s * f, r.left + r.width / 2, r.top + r.height / 2); }
+
+      function show(i) {
+        idx = (i + list.length) % list.length;
+        var src = list[idx];
+        img.src = src.currentSrc || src.src;
+        img.alt = src.alt;
+        caption.textContent = src.alt;
+        count.textContent = list.length > 1 ? (idx + 1) + ' / ' + list.length : '';
+        lb.classList.toggle('single', list.length < 2);
+        reset();
+      }
+      function open(fromImg) {
+        var gallery = fromImg.closest('.dialog-gallery');
+        list = Array.prototype.slice.call(gallery ? gallery.querySelectorAll('img') : [fromImg]);
+        lb.showModal();
+        show(list.indexOf(fromImg));
+      }
+
+      // Photos inside project detail panels open the viewer
+      document.querySelectorAll('.project-dialog .dialog-gallery').forEach(function (g) {
+        g.addEventListener('click', function (e) {
+          var t = e.target.closest('.media-slot');
+          var im = t && t.querySelector('img');
+          if (im) open(im);
+        });
+      });
+
+      lb.querySelector('.lb-bar').addEventListener('click', function (e) {
+        var b = e.target.closest('[data-lb]'); if (!b) return;
+        var a = b.dataset.lb;
+        if (a === 'prev') show(idx - 1);
+        else if (a === 'next') show(idx + 1);
+        else if (a === 'in') zoomCenter(1.5);
+        else if (a === 'out') zoomCenter(1 / 1.5);
+        else if (a === 'fit') reset();
+        else if (a === 'close') lb.close();
+      });
+
+      lb.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+        else if (e.key === '+' || e.key === '=') zoomCenter(1.5);
+        else if (e.key === '-') zoomCenter(1 / 1.5);
+        else if (e.key === '0') reset();
+      });
+
+      stage.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        zoomAt(s * Math.exp(-e.deltaY * 0.0015), e.clientX, e.clientY);
+      }, { passive: false });
+
+      // Drag to pan, pinch to zoom, tap/click to toggle zoom
+      var pts = new Map(), start = null, pinch = null, moved = 0;
+      stage.addEventListener('pointerdown', function (e) {
+        stage.setPointerCapture(e.pointerId);
+        pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        moved = 0;
+        if (pts.size === 1) start = { x: e.clientX, y: e.clientY, tx: tx, ty: ty };
+        if (pts.size === 2) {
+          var p = Array.from(pts.values());
+          pinch = { d: Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y), s: s };
+        }
+      });
+      stage.addEventListener('pointermove', function (e) {
+        if (!pts.has(e.pointerId)) return;
+        pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        if (pts.size === 2 && pinch) {
+          var p = Array.from(pts.values());
+          var d = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+          zoomAt(pinch.s * d / pinch.d, (p[0].x + p[1].x) / 2, (p[0].y + p[1].y) / 2);
+          moved = 99;
+        } else if (pts.size === 1 && start) {
+          var dx = e.clientX - start.x, dy = e.clientY - start.y;
+          moved = Math.max(moved, Math.abs(dx) + Math.abs(dy));
+          if (s > 1) { tx = start.tx + dx; ty = start.ty + dy; clampPan(); apply(); }
+        }
+      });
+      function up(e) {
+        var wasTap = pts.size === 1 && moved < 6;
+        pts.delete(e.pointerId);
+        if (pts.size < 2) pinch = null;
+        if (pts.size === 1) { var p = Array.from(pts.values())[0]; start = { x: p.x, y: p.y, tx: tx, ty: ty }; }
+        if (e.type !== 'pointerup' || !wasTap) return;
+        // Pointer capture retargets events to the stage, so hit-test the photo by position
+        var r = img.getBoundingClientRect();
+        var onImg = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+        if (onImg) {
+          if (s > 1.01) reset(); else zoomAt(2.5, e.clientX, e.clientY);
+        } else if (s <= 1.01) {
+          lb.close();                          // tap on the dark area closes
+        }
+      }
+      stage.addEventListener('pointerup', up);
+      stage.addEventListener('pointercancel', up);
+
+      caption.addEventListener('click', function () { lb.close(); });
+      lb.addEventListener('close', function () { img.removeAttribute('src'); reset(); });
+    })();
+  </script>
+
+  <!-- FADE-IN: reveals sections as they scroll into view. Kept here so the page never depends on script.js
+       (if script.js breaks, the sections still show up). -->
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('visible'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
